@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 import * as restify from 'restify';
 import env from '../../environment';
 import { Router } from '../common/router';
