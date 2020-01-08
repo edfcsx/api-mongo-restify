@@ -1,6 +1,6 @@
 import * as restify from 'restify';
 import { ModelRouter } from '../../common/model-router';
-import { User } from './../models/user.model';
+import { User } from '../models/user.model';
 
 class UserRouter extends ModelRouter<User> {
 

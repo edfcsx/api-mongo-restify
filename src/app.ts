@@ -1,6 +1,8 @@
 import { Server } from './loaders/server';
-import { utilsRouter } from './api/routes/utils';
-import { userRouter } from './api/routes/users';
+import { utilsRouter } from './api/routes/utils.route';
+import { userRouter } from './api/routes/users.route';
+import { reviewsRouter } from './api/routes/reviews.route';
+import { restaurantsRouter } from './api/routes/restaurants.route';
 
 const server = new Server();
 
@@ -8,6 +10,8 @@ server.bootstrap(
   [
     utilsRouter,
     userRouter,
+    restaurantsRouter,
+    reviewsRouter,
   ]
 )
   .then((server) => {
