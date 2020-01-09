@@ -6,7 +6,23 @@
   "scripts": {
     "compile:watch": "yarn run compile:clear && tsc -w",
     "compile:clear": "rimraf -f dist",
-    "dev": "nodemon dist/src/app --inspect"
+    "dev": "nodemon dist/src/app --inspect",
+    "test": "jest --detectOpenHandles --watch"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "dependencies": {
     "bcrypt": "^3.0.7",

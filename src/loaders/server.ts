@@ -48,4 +48,8 @@ export class Server {
     return this.initializeDatabase()
       .then(() => this.initializeServer(routers).then(() => this));
   }
+
+  shutdown(): Promise<Server> {
+    return mongoose.disconnect().then(() => this.application.close())
+  }
 }

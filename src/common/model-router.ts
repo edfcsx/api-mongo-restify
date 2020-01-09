@@ -54,8 +54,8 @@ export abstract class ModelRouter<D extends mongoose.Document> extends Router {
       let document = new this.model({ ...req.body });
 
       document.save()
-        .then((document) => {
-          res.json(document);
+        .then(async (document) => {
+          res.json(await this.model.findById(document._id));
           return next();
         })
         .catch(next);
