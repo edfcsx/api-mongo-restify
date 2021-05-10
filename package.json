@@ -27,7 +27,7 @@
   "dependencies": {
     "bcrypt": "^3.0.7",
     "dotenv": "^8.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mongoose": "^5.8.4",
     "restify": "^8.5.1",
     "restify-errors": "^8.0.2",
